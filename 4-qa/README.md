@@ -14,10 +14,10 @@ Follow these steps to set up your environment and run the test script:
 
 Start by cloning this repository to your local machine:
 ```
-git clone https://github.com/your-username/qa-interview-challenge.git
+git clone https://github.com/Nayya-com/interviews.git
 cd qa-interview-challenge
 ```
-Please replace `https://github.com/yourusername/qa-interview-challenge.git` with the actual URL of your repository.
+
 ### 2. Install Dependencies
 
 Install the required Node.js dependencies, including Playwright:
