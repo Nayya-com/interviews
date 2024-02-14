@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Form for QA Interview</title>
+    <style>
+        .error { color: red; }
+        .valid { color: green; }
+        input.invalid { border: 1px solid red; }
+        input.valid { border: 1px solid green; }
+    </style>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<form id="registrationForm">
+    <div>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" class="form-input"><br>
+        <span id="nameError" class="error"></span>
+    </div>
+    <div>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" class="form-input"><br>
+        <span id="emailError" class="error"></span>
+    </div>
+    <div>
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age" class="form-input" min="18" max="99"><br>
+        <span id="ageError" class="error"></span>
+    </div>
+    <button type="button" id="submitButton">Submit</button>
+</form> 
+
+<script>
+document.getElementById('submitButton').addEventListener('click', function() {
+    // Reset validation states
+    document.querySelectorAll('.form-input').forEach(input => {
+        input.classList.remove('invalid');
+        input.classList.add('valid');
+    });
+    document.querySelectorAll('.error').forEach(span => {
+        span.textContent = '';
+    });
+
+    // Validate inputs
+    let isValid = true;
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const age = document.getElementById('age');
+    if (name.value.trim() === '') {
+        document.getElementById('nameError').textContent = 'Name is required';
+        name.classList.add('invalid');
+        isValid = false;
+    }
+    if (!email.value.includes('@') || !email.value.includes('.')) {
+        document.getElementById('emailError').textContent = 'Email is invalid';
+        email.classList.add('invalid');
+        isValid = false;
+    }
+    if (age.value < 18 || age.value > 99) {
+        document.getElementById('ageError').textContent = 'Age must be between 18 and 99';
+        age.classList.add('invalid');
+        isValid = false;
+    }
+
+    // Submit form if valid
+    if (isValid) {
+        alert('Form submitted successfully!');
+        // Here, you would typically handle the form submission, e.g., sending data to a server
+        // For this example, we're just displaying a success message
+    }
+});
+</script>
+
+</body>
+</html>
