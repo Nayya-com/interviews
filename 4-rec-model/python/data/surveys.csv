@@ -34,7 +34,6 @@ idx,age,family,salary,household_salaries,financial_risk_preference,preexisting_c
 32,24,Me and my Spouse,65740,78888.0,3,none,68,315,2381,2,none,7,I exercise everyday,HSA,Cigna Choice HDHP
 33,53,"Me, Spouse, and Kids",124436,149323.19999999998,3,none,64,414,0,3,married,0,I don't exercise,borrow money,Cigna Base HDHP
 34,26,Me and my Spouse,58836,88254.0,5,none,524,0,1407,0,none,3,I exercise everyday,borrow money,Cigna Choice HDHP
-35,42,Just Me,31020,31020.0,3,obesity,93,324,1821,2,divorced,6,I exercise 3x a week,borrow money,Cigna Choice HDHP
 36,22,Me and my kids,60161,78209.3,4,high blood pressure,52,322,1209,2,none,3,I exercise 3x a week,have savings,Cigna Choice HDHP
 37,24,Me and my kids,40534,56747.6,3,none,45,1265,0,8,none,0,I exercise everyday,borrow money,Cigna Choice HDHP
 38,37,Me and my Spouse,140307,210460.5,3,none,149,161,574,2,none,2,I exercise everyday,HSA,Cigna Base HDHP
