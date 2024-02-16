@@ -1,0 +1,39 @@
+# Ignore bundler config
+/.bundle
+
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/*.sqlite3-*
+
+# Ignore all logfiles and tempfiles.
+log/*
+tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Ignore pidfile and other system files
+/tmp/pids/*
+/tmp/cache/*
+
+# Ignore compiled assets
+/public/assets 
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
+
+# Ignore uploads
+/storage/*
+!/storage/.keep
+/public/uploads
+
+# Ignore node modules 
+/node_modules/
+npm-debug.log
+yarn-error.log
+
+# Ignore IDE files 
+.idea/
+*.iml
+
+# Ignore Mac OS files
+.DS_Store
