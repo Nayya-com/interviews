@@ -71,5 +71,11 @@ More advanced items that are nice to haves:
 ### Step 6: Wrapping up
 Ask the intervewee what their thoughts are on the exercise. This is a fairly untested version so any feedback is helpful. Ask them about how they think about testing and working with engineers. 
 
+**Other Questions to Ask**
+
+- CI/CD - What tools have you worked with in the past? Describe how QA can be implemented into the pipeline.
+- Accessibility - Are you familiar with WCAG? What would you change on this shopping cart to enhance the accessibility? How does that fit into the QA process?
+- General - How do you decide what to automate vs what to test manually? How do you prioritize what to test? What is your approach to performance testing?
+
 Leave time at the end for them to ask you questions (no more than 5 minutes).
 
