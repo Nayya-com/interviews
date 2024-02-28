@@ -1,0 +1,9 @@
+<%= line_item.product.name %> | 
+<%= number_to_currency line_item.product.price %> 
+<%= button_to "Remove", 
+             remove_item_cart_path(id: line_item.id), 
+             method: :delete,
+             data: { confirm: "Are you sure?" },
+             remote: true %>
+<br>
+

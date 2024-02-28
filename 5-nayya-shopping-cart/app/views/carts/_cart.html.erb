@@ -1,0 +1,7 @@
+<% @line_items.each do |item| %>
+  <%= render 'cart_item', line_item: item  %>  
+<% end %>
+
+<div>
+  Subtotal: <%= number_to_currency @cart.subtotal %>
+</div>
