@@ -29,6 +29,16 @@ Once the candidate has downloaded and extracted the zip file, guide them through
 - Encourage the candidate to verbalize their thought process as they work through the challenge.
 - Discuss their approach, asking about the choices they made and any challenges they encountered.
 
+## Questions to Ask the Candidate
+- How do you decide which test cases to include in the script?
+- Can you walk me through your thought process for designing a test case for validating the email input?
+- How do you determine the balance between enough coverage and the time it takes to run the tests?
+- Describe how you would integrate this test script into a CI/CD pipeline.
+- How would you modify your tests to account for changes in the form's validation logic or additional input fields?
+- In cases where test automation is not feasible or practical, how do you approach manual testing?
+- Can you explain the significance of using `await` in your Playwright scripts? How does it affect test execution?
+- How do you ensure your tests remain maintainable and scalable as the application grows?
+- How would you handle testing in different environments (dev/staging/prod)?
 
 ## What We Are Looking For
 When evaluating candidates' submissions, consider the following criteria:
