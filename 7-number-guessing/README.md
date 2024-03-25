@@ -39,6 +39,8 @@ button
 ```
 
 If they made it to the guess counter, guess tracker, and/or scoreboard have them do some layout with those. Maybe guess tracker to the right of the form, and make sure it collapses appropriately to single column for mobile. Here is a simple layout sketch
+![Untitled-2023-12-20-1027](https://github.com/Nayya-com/interviews/assets/1495051/8f1a52c7-a48b-4e71-9f64-816a6c544491)
+
 
 1. Using the server instructions above, spinup the server locally, and get your tunnel link with ngrok.
 2. Setup a new coderpad session using [this question](https://app.coderpad.io/dashboard/questions/all/276638).
