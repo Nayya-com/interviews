@@ -50,7 +50,7 @@ If they made it to the guess counter, guess tracker, and/or scoreboard have them
 6. Have them display the feedback about their guess to the user.
 7. Have them make & display a guess counter.
 8. Have them store previous guesses and display them to the user.
-9. Have the previous guesses also display the feedback.
+9. Have the previous guesses also display the feedback (this could be done with the message, colors indicating higher or lower, or whatever solution they feel like this is a good time to let them make and execute a decision).
 10. Have them create a scoreboard that shows the number of guesses it took to successfully answer (you may need to restart the server with a super small range to test this).
 11. Have them validate only numbers in the input.
 12. Have them make it so the user can't submit numbers that were already guessed.
