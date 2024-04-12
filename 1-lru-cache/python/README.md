@@ -14,7 +14,7 @@ Our LRU Cache is implemented by pairing a Doubly Linked List with a Hash
 
 ```bash
 cd inteviews/1-lru-cache/python
-python -m unittest tests/cache.p
+python -m unittest tests/cache.py
 ```
 
 See [root readme](../../README.md) to install python
