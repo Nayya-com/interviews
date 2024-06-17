@@ -13,7 +13,7 @@ Our LRU Cache is implemented by pairing a Doubly Linked List with a Hash
 # Build
 
 ```bash
-cd inteviews/1-lru-cache/python
+cd inteviews/1-lru-cache/typescript
 npm install
 ```
 
