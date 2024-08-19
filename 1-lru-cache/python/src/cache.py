@@ -55,16 +55,6 @@ class Cache:
 
         self.move_to_tail(key)
 
-        # if None == result.prevNode:
-        #     self.head = result.nextNode
-        #     self.head.prevNode = None        
-
-        # self.tail.nextNode = result
-        # result.nextNode = None
-        # result.prevNode = None
-        # self.tail = result
-        # return result.value
-
     def put(self, key, val) -> None:
         if None == key:
             return None
@@ -83,22 +73,6 @@ class Cache:
         if self.currentSize > self.maxSize:
             self.remove_from_head()
             self.currentSize -= 1
-
-        # self.currentSize += 1
-        # if self.currentSize > self.maxSize:
-        #     self.lookupTable.pop(self.head.key)
-        #     self.head = self.head.nextNode
-        #     self.head.prevNode = None
-        #     self.currentSize -= 1
-        
-        # newNode = Node(key, val, self.tail, None)
-        # if None == self.tail:
-        #     self.head = newNode
-        # else:
-        #     self.tail.nextNode = newNode
-        
-        # self.tail = newNode
-        # self.lookupTable[key] = newNode
 
     def toArray(self):        
         a = []
