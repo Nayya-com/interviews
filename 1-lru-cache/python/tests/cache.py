@@ -1,6 +1,13 @@
 from src.cache import Cache
 import unittest
 
+"""
+most recent is at tail
+
+we kick items at the head when at capacity
+"""
+
+
 class CachTest(unittest.TestCase):
 
     def test_constructs(self):
