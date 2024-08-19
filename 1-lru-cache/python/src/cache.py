@@ -16,7 +16,7 @@ class Cache:
 
         if node == self.head:
             self.head = node.nextNode
-            self.prevNode = None
+            node.prevNode = None
         else:
             left = node.prevNode
             right = node.nextNode
@@ -25,13 +25,15 @@ class Cache:
 
         # add node at tail
         before_tail = self.tail.prevNode
-        before_tail.nextNode = node
-        node.prevNode = before_tail
+        tail = self.tail
+        tail.nextNode = node
+        node.prevNode = tail
         node.nextNode = None
         self.tail = node
 
     def remove_from_head(self, key):
         # Note: copied from above
+        node = self.lookupTable[key]
         self.head = node.nextNode
         self.prevNode = None
         # This part is only difference from above
@@ -48,7 +50,7 @@ class Cache:
         if self.tail is result:
             return result.value
 
-        self.move_to_tail()
+        self.move_to_tail(key)
 
         # if None == result.prevNode:
         #     self.head = result.nextNode
@@ -63,12 +65,21 @@ class Cache:
     def put(self, key, val) -> None:
         if None == key:
             return None
-
-        self.move_to_tail(val)
-        if self.currentSize >= self.maxSize:
-            self.remove_from_head()
+        
+        newNode = Node(key, val, self.tail, None)
+        if None == self.tail:
+            self.head = newNode
         else:
-            self.currentSize += 1
+            self.tail.nextNode = newNode
+        
+        self.tail = newNode
+        self.lookupTable[key] = newNode
+
+        self.move_to_tail(key)
+        self.currentSize += 1
+        if self.currentSize > self.maxSize:
+            self.remove_from_head(key)
+            self.currentSize -= 1
 
         # self.currentSize += 1
         # if self.currentSize > self.maxSize:

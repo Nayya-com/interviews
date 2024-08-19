@@ -57,9 +57,13 @@ class CachTest(unittest.TestCase):
     def test_gets_head(self):
         cache = Cache(3)
         cache.put('bananas', 111)
+        print(cache.toArray())
         cache.put('apples', 222)
+        print(cache.toArray())
         cache.put('oranges', 333)        
+        print(cache.toArray())
         cache.get('bananas')
+        print(cache.toArray())
         self.assertEqual(cache.toArray(), [222, 333, 111])    
     
     def test_moves_tail_when_getting_middle(self):
