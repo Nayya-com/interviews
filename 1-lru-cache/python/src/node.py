@@ -4,4 +4,6 @@ class Node:
         self.value = value        
         self.prevNode = prevNode
         self.nextNode = nextNode
-        
+    
+    def __repr__(self):
+        return f"Node({self.key=},{self.value=})"
