@@ -31,11 +31,14 @@ class Cache:
         node.nextNode = None
         self.tail = node
 
-    def remove_from_head(self, key):
+    def remove_from_head(self):
         # Note: copied from above
-        node = self.lookupTable[key]
-        self.head = node.nextNode
-        self.prevNode = None
+        key = self.head.key
+
+        right = self.head.nextNode
+        self.head = right
+        right.prevNode = None
+
         # This part is only difference from above
         del self.lookupTable[key]
 
@@ -78,7 +81,7 @@ class Cache:
         self.move_to_tail(key)
         self.currentSize += 1
         if self.currentSize > self.maxSize:
-            self.remove_from_head(key)
+            self.remove_from_head()
             self.currentSize -= 1
 
         # self.currentSize += 1

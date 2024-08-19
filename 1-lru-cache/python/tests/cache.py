@@ -42,7 +42,7 @@ class CachTest(unittest.TestCase):
         cache.put('bananas', 111)
         cache.put('apples', 222)
         cache.put('oranges', 333)
-        cache.put('cucumbers', 444)                
+        cache.put('cucumbers', 444)  
         self.assertEqual(cache.currentSize, 3)
         self.assertEqual(cache.toArray(), [222, 333, 444])
     
@@ -57,13 +57,9 @@ class CachTest(unittest.TestCase):
     def test_gets_head(self):
         cache = Cache(3)
         cache.put('bananas', 111)
-        print(cache.toArray())
         cache.put('apples', 222)
-        print(cache.toArray())
         cache.put('oranges', 333)        
-        print(cache.toArray())
         cache.get('bananas')
-        print(cache.toArray())
         self.assertEqual(cache.toArray(), [222, 333, 111])    
     
     def test_moves_tail_when_getting_middle(self):
