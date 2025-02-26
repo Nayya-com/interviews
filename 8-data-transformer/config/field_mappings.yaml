@@ -1,0 +1,15 @@
+column_mappings:
+  # Map original CSV column names to snake_case
+  GroupID: group_id
+  PlanID: plan_id
+  FirstName: first_name
+  LastName: last_name
+  Gender: gender
+  DOB: date_of_birth
+  SubscriberSSN: subscriber_ssn
+  RelationshipCode: relationship_code
+  EnrollmentStart: enrollment_start
+  EnrollmentEnd: enrollment_end
+  BenefitType: benefit_type
+  BenefitMax: benefit_max
+  BenefitMinimum: benefit_minimum

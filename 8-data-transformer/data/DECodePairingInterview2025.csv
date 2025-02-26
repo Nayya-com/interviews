@@ -1,0 +1,15 @@
+GroupID,PlanID,FirstName,LastName,Gender,DOB,SubscriberSSN,RelationshipCode,EnrollmentStart,EnrollmentEnd,BenefitType,BenefitMax,BenefitMinimum
+ABCGroupID123,JustASimplePlan,John,Doe,M,1970-10-09,90909090,Subscriber,2025-01-01,,Accident,10,8
+ABCGroupID123,JustASimplePlan,Alpha,Centauri,F,1983-07-10,123456789,Subscriber,2025-01-01,,Accident,100,3
+ABCGroupID123,AMoreComplexPlan,John,Doe,M,1970-10-09,90909090,Spouse,2025-01-01,,HI,45,4
+ABCGroupID123,JustASimplePlan,Jill,Doe,F,1976-04-02,90909090,Spouse,2025-01-01,,Accident,43,23
+ABCGroupID123,AMoreComplexPlan,Alpha,Centauri,F,1983-07-12,123456789,Subscriber,2025-01-01,,HI,65,54
+ABCGroupID123,JustASimplePlan,Beta,Centauri,M,2000-09-15,123456789,Dependent,2025-01-01,,Accident,45,
+BallmoreGroupID414,AnotherSimplePlan,Frank,Sobotka,M,1962-09-19,787654999,Subscriber,2025-01-01,,Pet,2000,200
+BallmoreGroupID414,JustASimplePlan,Frank,Sobotka,M,1962-09-19,787654999,Subscriber,2025-01-01,,Accident,80,17
+BallmoreGroupID414,JustASimplePlan,Clay,Davis,M,1969-01-02,6434345632,Subscriber,2025-02-01,2025-01-01,Accident,80,17
+DitmarGroupID777,AMoreComplexPlan,Walk,Walker,F,1987-06-03,4321098760,Subscriber,2025-01-01,2025-03-01,HI,10000,100
+DitmarGroupID777,AMoreComplexPlan,Tall,Walker,F,1979-04-04,4321098760,Spouse,2025-01-01,,HI,10000,100
+DitmarGroupID777,AMoreComplexPlan,GI,Jane,F,1990-04-04,867543298,Subscriber,2025-05-01,,HI,10000,100
+DitmarGroupID777,AnotherSimplePlan,Walk,Walker,F,1987-06-03,4321098760,Subscriber,2025-01-01,2025-03-01,Pet,2000,100
+DitmarGroupID777,AnotherSimplePlan,Mark,Mark,M,1995-03-03,746509361,Subscriber,2025-05-01,,Pet,2000,
