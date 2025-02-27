@@ -1,0 +1,62 @@
+{
+    "result_count": 1,
+    "results": [
+        {
+            "created_epoch": "1454007906000",
+            "enumeration_type": "NPI-1",
+            "last_updated_epoch": "1454007906000",
+            "number": "1326405838",
+            "addresses": [
+                {
+                    "country_code": "US",
+                    "country_name": "United States",
+                    "address_purpose": "MAILING",
+                    "address_type": "DOM",
+                    "address_1": "262 E 400 S",
+                    "city": "SPRINGVILLE",
+                    "state": "UT",
+                    "postal_code": "846631956",
+                    "telephone_number": "801-649-8009"
+                },
+                {
+                    "country_code": "US",
+                    "country_name": "United States",
+                    "address_purpose": "LOCATION",
+                    "address_type": "DOM",
+                    "address_1": "262 E 400 S",
+                    "city": "SPRINGVILLE",
+                    "state": "UT",
+                    "postal_code": "846631956",
+                    "telephone_number": "801-649-8009"
+                }
+            ],
+            "practiceLocations": [],
+            "basic": {
+                "first_name": "JARED",
+                "last_name": "FREESTONE",
+                "middle_name": "GARY",
+                "credential": "O.D.",
+                "sole_proprietor": "NO",
+                "sex": "M",
+                "enumeration_date": "2016-01-28",
+                "last_updated": "2016-01-28",
+                "status": "A",
+                "name_prefix": "--",
+                "name_suffix": "--"
+            },
+            "taxonomies": [
+                {
+                    "code": "152W00000X",
+                    "taxonomy_group": "",
+                    "desc": "Optometrist",
+                    "state": "UT",
+                    "license": "9631881-9934",
+                    "primary": true
+                }
+            ],
+            "identifiers": [],
+            "endpoints": [],
+            "other_names": []
+        }
+    ]
+}
