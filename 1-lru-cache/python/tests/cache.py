@@ -1,6 +1,13 @@
 from src.cache import Cache
 import unittest
 
+"""
+most recent is at tail
+
+we kick items at the head when at capacity
+"""
+
+
 class CachTest(unittest.TestCase):
 
     def test_constructs(self):
@@ -35,7 +42,7 @@ class CachTest(unittest.TestCase):
         cache.put('bananas', 111)
         cache.put('apples', 222)
         cache.put('oranges', 333)
-        cache.put('cucumbers', 444)                
+        cache.put('cucumbers', 444)  
         self.assertEqual(cache.currentSize, 3)
         self.assertEqual(cache.toArray(), [222, 333, 444])
     
