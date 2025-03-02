@@ -8,8 +8,8 @@ column_mappings:
   DOB: date_of_birth
   SubscriberSSN: subscriber_ssn
   RelationshipCode: relationship_code
-  EnrollmentStart: enrollment_start
-  EnrollmentEnd: enrollment_end
+  EnrollmentStart: enrollment_start_date
+  EnrollmentEnd: enrollment_end_date
   BenefitType: benefit_type
   BenefitMax: benefit_max
   BenefitMinimum: benefit_minimum
