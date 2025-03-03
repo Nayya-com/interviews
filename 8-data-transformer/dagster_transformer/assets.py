@@ -8,7 +8,7 @@ import pandas as pd
 @dg.asset
 def read_sample_enrollment_data() -> pd.DataFrame:
     """Sample asset showing pandas and sqlalchemy usage."""
-    df = pd.read_csv("data/DECodePairingInterview2025.csv")
+    df = pd.read_csv("data/raw_enrollments_202503.csv")
     return df
 
 

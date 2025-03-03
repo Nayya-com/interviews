@@ -15,7 +15,6 @@ def create_db():
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         person_id TEXT NOT NULL,
         group_id TEXT NOT NULL,
-        group_name TEXT NOT NULL,
         plan_id TEXT NOT NULL,
         gender VARCHAR(1) NOT NULL,
         relationship_code INTEGER NOT NULL,
