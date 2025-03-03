@@ -31,3 +31,20 @@ def config_column_transformer(df: pd.DataFrame) -> pd.DataFrame:
     # Transform DataFrame columns to match the config
 
     return df
+
+
+def create_person_id(last_name: str, subscriber_ssn: str, date_of_birth: str) -> str:
+    """
+    Creates a person id for the dataframe
+
+    Args:
+        last_name (str): The last name of the person
+        subscriber_ssn (str): The subscriber ssn of the person
+        date_of_birth (str): The date of birth of the person
+
+    Returns:
+        str: The person id
+    """
+    id = "test"
+
+    return id

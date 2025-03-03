@@ -13,7 +13,7 @@ def create_db():
         """
     CREATE TABLE IF NOT EXISTS nayya_enrollments (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        internal_id TEXT,
+        person_id TEXT NOT NULL,
         group_id TEXT,
         group_name TEXT,
         plan_id TEXT,
@@ -22,11 +22,32 @@ def create_db():
         enrollment_start_date DATE,
         enrollment_end_date DATE,
         benefit_type TEXT,
-        benefit_max INTEGER,
         benefit_minimum INTEGER,
+        benefit_max INTEGER,
         benefit_spread INTEGER
     )
     """
+    )
+
+    cursor.execute(
+        """
+    CREATE TABLE IF NOT EXISTS relationship_codes_mapping (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        relationship_code INTEGER,
+        relationship_name TEXT
+    )
+    """
+    )
+
+    cursor.execute(
+        """
+        INSERT INTO relationship_codes_mapping (relationship_code, relationship_name)
+        VALUES
+            (1, "Subscriber"),
+            (2, "Spouse"),
+            (3, "Dependent"),
+            (4, "Other")
+        """
     )
 
     # Commit changes and close the connection

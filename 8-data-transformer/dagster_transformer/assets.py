@@ -1,5 +1,5 @@
 import sqlite3
-from code.transformer import config_column_transformer
+from code.transformer import config_column_transformer, create_person_id
 
 import dagster as dg
 import pandas as pd
@@ -26,11 +26,17 @@ def transform_enrollment_data(read_sample_enrollment_data: pd.DataFrame) -> pd.D
     # Transform columns to match the config
     df = config_column_transformer(read_sample_enrollment_data)
 
+    # Create person id and strip PHI/PII from the data
+
+    # Transform the relationship code
+
+    #
+
     return df
 
 
 @dg.asset
-def write_enrollment_data_to_db(transform_enrollment_data: pd.DataFrame) -> None:
+def write_enrollment_data_to_db(transform_enrollment_data: dict) -> None:
     """Write enrollment data to the database"""
     pass
 
@@ -38,16 +44,28 @@ def write_enrollment_data_to_db(transform_enrollment_data: pd.DataFrame) -> None
     conn = sqlite3.connect("nayya.db")
     cursor = conn.cursor()
 
-    df_entries = transform_enrollment_data.to_dict(orient="records")
     # Insert data into the database
-    for row in df_entries:
+    for row in transform_enrollment_data:
         print(row)
         cursor.execute(
             """
-        INSERT INTO nayya_enrollments (group_id, plan_id)
-        VALUES (?, ?)
+        INSERT INTO nayya_enrollments (person_id, group_id, group_name, plan_id, gender, relationship_code, enrollment_start_date, enrollment_end_date, benefit_type, benefit_max, benefit_minimum, benefit_spread)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """,
-            (row["GroupID"], row["PlanID"]),
+            (
+                row["person_id"],
+                row["group_id"],
+                row["group_name"],
+                row["plan_id"],
+                row["gender"],
+                row["relationship_code"],
+                row["enrollment_start_date"],
+                row["enrollment_end_date"],
+                row["benefit_type"],
+                row["benefit_minimum"],
+                row["benefit_max"],
+                row["benefit_spread"],
+            ),
         )
 
     # Commit changes and close the connection
