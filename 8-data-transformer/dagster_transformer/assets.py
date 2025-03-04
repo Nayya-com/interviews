@@ -1,5 +1,4 @@
 import sqlite3
-from code.transformer import config_column_transformer, create_person_id
 
 import dagster as dg
 import pandas as pd
@@ -13,7 +12,7 @@ def read_sample_enrollment_data() -> pd.DataFrame:
 
 
 @dg.asset
-def transform_enrollment_data(read_sample_enrollment_data: pd.DataFrame) -> pd.DataFrame:
+def transform_enrollment_data(read_sample_enrollment_data: pd.DataFrame) -> dict:
     """
     This asset transforms the enrollment data so it can be written to the database
 
@@ -23,16 +22,8 @@ def transform_enrollment_data(read_sample_enrollment_data: pd.DataFrame) -> pd.D
     Returns:
         pd.DataFrame: The transformed enrollment data
     """
-    # Transform columns to match the config
-    df = config_column_transformer(read_sample_enrollment_data)
 
-    # Create person id and strip PHI/PII from the data
-
-    # Transform the relationship code
-
-    #
-
-    return df
+    return {}
 
 
 @dg.asset
